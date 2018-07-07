@@ -74,6 +74,10 @@ section {
     text-transform: uppercase;
 }
 
+/* Focused elements */
+*:focus {
+    outline: red 5px solid;
+}
 /* ====================== Navigation ====================== */
 
 nav {
@@ -193,7 +197,7 @@ nav h1 a {
     background-color: #f3f3f3;
     list-style: outside none none;
     margin: 0;
-    padding: 30px 15px 60px;
+    padding: 4% 2% 8%;
     text-align: center;
 }
 
@@ -203,7 +207,7 @@ nav h1 a {
     font-family: Arial, sans-serif;
     margin: 5% 2%;
     /* min-height: 380px; - removing for responsivness */
-    padding: 1rem;
+    padding: 3%;
     width: auto; /* Making the box responsive */    
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -261,8 +265,6 @@ nav h1 a {
     height: calc(95vh - 140px);
     min-height: 200px;
     max-height: 400px;
-    position: relative;
-    top: 127px;
     width: 100%;
 }
 
@@ -316,7 +318,7 @@ nav h1 a {
 #reviews-container {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
-    padding: 140px 40px 30px;
+    padding: 140px 4% 4%;
 }
 
 #reviews-container {
@@ -372,6 +374,7 @@ nav h1 a {
         width:46%;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding: 2%;
     }
 }
 
@@ -390,7 +393,6 @@ nav h1 a {
         position: fixed;
         right: 0;
         top: 0;
-        margin-top: 80px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-left: solid 1px #d9d9d9;
@@ -406,7 +408,8 @@ nav h1 a {
     }
 }
 
-@media screen and (min-width: 951px) { 
+
+@media screen and (min-width: 751px) { 
 /* ====================== Restaurant Listing ====================== */
     
     /* Making the restaurant list elements display 3 in a row */
@@ -415,13 +418,55 @@ nav h1 a {
     }
 }
 
-@media screen and (min-width: 1151px) { 
+
+@media screen and (min-width: 951px) { 
 /* ====================== Restaurant Listing ====================== */
     
-    /* Making the restaurant list elements display 3 in a row */
+    /* Making the restaurant list elements display 4 in a row */
      #restaurants-list li { 
         width:23%;
         margin-left: 1%;
         margin-right: 1%;
+        padding: 1%;
     }
+}
+
+
+@media screen and (min-width: 1151px) { 
+/* ====================== Restaurant Listing ====================== */
+    
+    /* Making the restaurant list elements display 5 in a row */
+     #restaurants-list li { 
+        width:18%;
+    }
+}
+
+@media screen and (min-width: 1400px) { 
+/* Centering and limiting the width of page content */
+    /* ====================== Restaurant Listing ====================== */
+    #restaurants-list {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    /* ====================== Restaurant Page ====================== */
+    .inside {
+        background-color: #eeeeee; 
+    }
+    .inside #breadcrumb {
+        max-width: 700px;
+        margin: 0 50% 0 auto;
+    }
+    .inside #maincontent {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .inside #map-container {
+        max-width: 700px;
+        left: 50%;  
+    }
+    .inside #footer {
+        max-width: 700px;
+        right: 50%;
+    }
+
 }
