@@ -75,7 +75,7 @@ section {
 }
 
 /* Focused links and buttons */
-a:focus, button:focus {
+a:focus, button:focus, select:focus, option:focus {
     outline: red 3px solid;
 }
 /* ====================== Navigation ====================== */
@@ -134,9 +134,11 @@ nav.breadcrumb {
 .skip-link:focus { 
     left:3px;
 }
+a.skip-link:hover {
+    background:#2b7cb4;
+}
 a.skip-link:hover, a.skip-link:focus {
     color:#fff;
-    background:#2b7cb4;
 }
 /* Display list items side by side */
 
@@ -214,7 +216,6 @@ a.skip-link:hover, a.skip-link:focus {
     padding: 0 10px;
     width: 200px;
 }
-
 /* ====================== Restaurant Listing ====================== */
 
 #restaurants-list {
@@ -301,7 +302,7 @@ a.skip-link:hover, a.skip-link:focus {
     /* fallback for browsers not supporting calc */
     height: calc(95vh - 140px);
     min-height: 200px;
-    max-height: 400px;
+    max-height: 600px;
     width: 100%;
 }
 
@@ -355,12 +356,9 @@ a.skip-link:hover, a.skip-link:focus {
 #reviews-container {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
-    padding: 140px 4% 4%;
+    padding: 8% 4% 4%;
 }
 
-#reviews-container {
-    padding: 30px 40px 80px;
-}
 
 #reviews-container h2 {
     color: #f58500;
@@ -397,8 +395,6 @@ a.skip-link:hover, a.skip-link:focus {
 
 /* 2.0 Responsive design - for tablets, laptops */
 @media screen and (min-width: 551px) { 
-    /* ====================== Restaurant Listing ====================== */
-    
     /* Making the restaurant list elements display a couple in a row */
     #restaurants-list {
         display:-webkit-box;
@@ -422,6 +418,12 @@ a.skip-link:hover, a.skip-link:focus {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
+    
+    /* ====================== Restaurant Listing ====================== */
+        #restaurant-container { 
+            padding-top:140px;
+        }
+    
     /* ====================== Restaurant Details ====================== */
     .inside #map-container {
         width: 50%;
@@ -430,6 +432,7 @@ a.skip-link:hover, a.skip-link:focus {
         position: fixed;
         right: 0;
         top: 0;
+        padding-top: 80px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-left: solid 1px #d9d9d9;
