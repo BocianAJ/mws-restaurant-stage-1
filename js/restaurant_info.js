@@ -150,6 +150,8 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  /* I have added an aria attriibute as part of accessibility feature for the Breadcrumb */
+  li.setAttribute("aria-current", "page");
   breadcrumb.appendChild(li);
 }
 

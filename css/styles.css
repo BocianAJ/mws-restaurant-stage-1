@@ -74,9 +74,9 @@ section {
     text-transform: uppercase;
 }
 
-/* Focused elements */
-*:focus {
-    outline: red 5px solid;
+/* Focused links and buttons */
+a:focus, button:focus {
+    outline: red 3px solid;
 }
 /* ====================== Navigation ====================== */
 
@@ -105,6 +105,12 @@ nav h1 a {
     text-transform: uppercase;
 }
 
+nav.breadcrumb {
+    height: auto;
+    display: block;
+    text-align: left;
+}
+
 #breadcrumb {
     padding: 1em 1.5rem;
     list-style: none;
@@ -114,6 +120,24 @@ nav h1 a {
     width: auto;
 }
 
+.skip-link {
+    position:absolute;
+    left:-2000px;
+    top:3px;
+    z-index: 100;
+    background: #3397DB;
+    color:#fff;
+    padding: 0.5em 1em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.skip-link:focus { 
+    left:3px;
+}
+a.skip-link:hover, a.skip-link:focus {
+    color:#fff;
+    background:#2b7cb4;
+}
 /* Display list items side by side */
 
 #breadcrumb li {
@@ -393,7 +417,7 @@ nav h1 a {
 
 @media screen and (min-width: 651px) {
     /* ====================== Navigation ====================== */
-    #breadcrumb {
+    nav.breadcrumb {
         width: 50%;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;

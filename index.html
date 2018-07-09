@@ -11,16 +11,18 @@
 
 <body>
     <header>
+        <!-- Skip link to main content passing over the google map -->
+        <a href="#restaurants-select" class="skip-link">Skip to select restaurant</a>
         <nav>
             <h1><a href="/">Restaurant Reviews</a></h1>
         </nav>
     </header>
 
     <main id="maincontent">
-        <section id="map-container">
+        <section id="map-container" role="application">
             <div id="map"></div>
         </section>
-        <section>
+        <section id="restaurant-select" tabindex="-1">
             <div class="filter-options">
                 <h2>Filter Results</h2>
                 <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
