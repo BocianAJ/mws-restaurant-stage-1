@@ -392,6 +392,35 @@ a.skip-link:hover, a.skip-link:focus {
     color: #666;
 }
 
+/* Review content */
+#reviews-list li p.reviewer {
+    font-size:1.2em;
+    color:#fff;
+}
+#reviews-list li p.review-date { 
+    text-align: right;
+    color:#ddd;
+}
+#reviews-list li p.reviewer, #reviews-list li p.review-date {
+    background-color: #000;
+    float: left;
+    width:50%;
+    padding-bottom: 0;
+    height:45px;
+    padding-top: 15px;
+    line-height: 15px;
+}
+#reviews-list li p.review-rating {
+    color: #fff;
+    background-color: orange;
+    border-radius: 0.2em;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 20px;
+    line-height: 1em;
+}
 
 /* 2.0 Responsive design - for tablets, laptops */
 @media screen and (min-width: 551px) { 
