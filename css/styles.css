@@ -258,7 +258,7 @@ a.skip-link:hover, a.skip-link:focus {
     width: 100%; /* making the image responsive */
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h3 {
     color: #f18200;
     font-family: Arial, sans-serif;
     font-size: 14pt;
@@ -286,7 +286,9 @@ a.skip-link:hover, a.skip-link:focus {
     text-decoration: none;
     text-transform: uppercase;
 }
-
+#restaurants-list li a:hover, #restaurants-list li a:focus {
+    background-color: #d98c00; 
+}
 /* ====================== Restaurant Details ====================== */
 
 .inside header {
@@ -313,8 +315,6 @@ a.skip-link:hover, a.skip-link:focus {
 }
 
 .inside #footer {
-    bottom: 0;
-    position: absolute;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -380,12 +380,17 @@ a.skip-link:hover, a.skip-link:focus {
     list-style-type: none;
     margin: 0 0 30px;
     overflow: hidden;
-    padding: 0 20px 20px;
+    padding: 0;
     position: relative;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
 }
 
 #reviews-list li p {
     margin: 0 0 10px;
+    padding: 0 20px 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #restaurant-hours td {
@@ -450,7 +455,10 @@ a.skip-link:hover, a.skip-link:focus {
     
     /* ====================== Restaurant Listing ====================== */
         #restaurant-container { 
-            padding-top:140px;
+            padding-top:150px;
+        }
+        #reviews-container { 
+            padding-top:3em;
         }
     
     /* ====================== Restaurant Details ====================== */
