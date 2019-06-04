@@ -64,7 +64,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.sizes = "(min-width:651px) 42vw, (min-width:1400px) 460px, 92vw";
     
   /* addng alt tag for html5 specification */
-  image.alt = "";
+  image.alt = ""; /* Left empty,the restaurant header supplies the necessary information */
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
