@@ -36,7 +36,7 @@ self.addEventListener('install', function (event) {
     );
 });
 
-/* Deleting old catches */
+/* Deleting old unwanted catches */
 
 
 self.addEventListener('activate', function (event) {
