@@ -1,5 +1,9 @@
 'use strict';
 
+import idb from "idb";
+console.log(idb);
+
+
 const staticCacheName = 'restaurant-reviews-v1';
 var allCaches = [staticCacheName];
 
@@ -11,7 +15,6 @@ const urlsCached = [
   'js/dbhelper.js',
   'js/main.js',
   'js/restaurant_info.js',
-  'data/restaurants.json',
   'img/',
   'img/1.jpg',
   'img/2.jpg',
